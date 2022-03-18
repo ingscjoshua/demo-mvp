@@ -19,6 +19,9 @@
 		870736C027E429B00062E545 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870736BF27E429B00062E545 /* APIClient.swift */; };
 		870736C227E42E4C0062E545 /* URLRequest+Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870736C127E42E4C0062E545 /* URLRequest+Resource.swift */; };
 		870736C427E4403D0062E545 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870736C327E4403D0062E545 /* constants.swift */; };
+		87882EA327E4E0100089D303 /* QuoteTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87882EA127E4E0100089D303 /* QuoteTVC.swift */; };
+		87882EA427E4E0100089D303 /* QuoteTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87882EA227E4E0100089D303 /* QuoteTVC.xib */; };
+		87D6CEF227E4F0FD00376768 /* UI+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D6CEF127E4F0FD00376768 /* UI+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		870736BF27E429B00062E545 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		870736C127E42E4C0062E545 /* URLRequest+Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Resource.swift"; sourceTree = "<group>"; };
 		870736C327E4403D0062E545 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		87882EA127E4E0100089D303 /* QuoteTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTVC.swift; sourceTree = "<group>"; };
+		87882EA227E4E0100089D303 /* QuoteTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteTVC.xib; sourceTree = "<group>"; };
+		87D6CEF127E4F0FD00376768 /* UI+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,18 +74,15 @@
 		870736A027E40E940062E545 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				870736A127E40E940062E545 /* AppDelegate.swift */,
-				870736A327E40E940062E545 /* SceneDelegate.swift */,
-				870736A527E40E940062E545 /* ViewController.swift */,
-				870736A727E40E940062E545 /* Main.storyboard */,
-				870736AA27E40E960062E545 /* Assets.xcassets */,
-				870736AC27E40E960062E545 /* LaunchScreen.storyboard */,
+				87882EA727E4E03B0089D303 /* delegates */,
+				87882EA627E4E0250089D303 /* views */,
 				870736AF27E40E960062E545 /* Info.plist */,
 				870736BB27E414550062E545 /* Presenters */,
 				870736B727E411C50062E545 /* Models */,
 				870736B827E412740062E545 /* Services */,
 				870736C127E42E4C0062E545 /* URLRequest+Resource.swift */,
 				870736C327E4403D0062E545 /* constants.swift */,
+				87D6CEF127E4F0FD00376768 /* UI+Extension.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -115,6 +118,36 @@
 				870736BF27E429B00062E545 /* APIClient.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		87882EA527E4E0170089D303 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				87882EA127E4E0100089D303 /* QuoteTVC.swift */,
+				87882EA227E4E0100089D303 /* QuoteTVC.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		87882EA627E4E0250089D303 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				87882EA527E4E0170089D303 /* cells */,
+				870736AC27E40E960062E545 /* LaunchScreen.storyboard */,
+				870736AA27E40E960062E545 /* Assets.xcassets */,
+				870736A727E40E940062E545 /* Main.storyboard */,
+				870736A527E40E940062E545 /* ViewController.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		87882EA727E4E03B0089D303 /* delegates */ = {
+			isa = PBXGroup;
+			children = (
+				870736A127E40E940062E545 /* AppDelegate.swift */,
+				870736A327E40E940062E545 /* SceneDelegate.swift */,
+			);
+			path = delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87882EA427E4E0100089D303 /* QuoteTVC.xib in Resources */,
 				870736AE27E40E960062E545 /* LaunchScreen.storyboard in Resources */,
 				870736AB27E40E960062E545 /* Assets.xcassets in Resources */,
 				870736A927E40E940062E545 /* Main.storyboard in Resources */,
@@ -189,9 +223,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				870736BA27E414140062E545 /* QuoteModel.swift in Sources */,
+				87D6CEF227E4F0FD00376768 /* UI+Extension.swift in Sources */,
 				870736C027E429B00062E545 /* APIClient.swift in Sources */,
 				870736C427E4403D0062E545 /* constants.swift in Sources */,
 				870736BD27E4146E0062E545 /* QuotePresenter.swift in Sources */,
+				87882EA327E4E0100089D303 /* QuoteTVC.swift in Sources */,
 				870736C227E42E4C0062E545 /* URLRequest+Resource.swift in Sources */,
 				870736B627E411A70062E545 /* QuoteService.swift in Sources */,
 				870736A627E40E940062E545 /* ViewController.swift in Sources */,
